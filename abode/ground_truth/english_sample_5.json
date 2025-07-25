@@ -1,0 +1,9 @@
+{
+  "title": "Modern Web Development",
+  "outline": [
+    { "level": "H1", "text": "Modern Web Development", "page": 1 },
+    { "level": "H2", "text": "Frontend Technologies", "page": 1 },
+    { "level": "H2", "text": "Backend Frameworks", "page": 1 },
+    { "level": "H2", "text": "DevOps Tools", "page": 1 }
+  ]
+}

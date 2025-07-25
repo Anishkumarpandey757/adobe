@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+motor
+python-dotenv
+python-multipart
+pymupdf
+python-docx
+pymongo
+numpy
+scikit-learn
+transformers
+torch
+jsonschema

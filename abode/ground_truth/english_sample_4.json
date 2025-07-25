@@ -1,0 +1,9 @@
+{
+  "title": "Python Programming",
+  "outline": [
+    { "level": "H1", "text": "Python Programming", "page": 1 },
+    { "level": "H2", "text": "Syntax", "page": 1 },
+    { "level": "H2", "text": "Data Types", "page": 1 },
+    { "level": "H2", "text": "Control Flow", "page": 1 }
+  ]
+}
