@@ -1,0 +1,25 @@
+{
+  "title": "Introduction to AI",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "Introduction to AI",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Overview",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Subfields of AI",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Challenges in AI",
+      "page": 1
+    }
+  ]
+}

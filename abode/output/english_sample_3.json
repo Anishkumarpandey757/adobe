@@ -1,0 +1,25 @@
+{
+  "title": "Basics of Quantum Computing",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "Basics of Quantum Computing",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Qubits",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Superposition",
+      "page": 1
+    },
+    {
+      "level": "H2",
+      "text": "Entanglement",
+      "page": 1
+    }
+  ]
+}

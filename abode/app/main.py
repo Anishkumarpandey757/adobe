@@ -6,10 +6,11 @@ import os, tempfile, shutil, subprocess, sys
 from pdf_pipeline.parse_pdf import parse_pdf
 from pdf_pipeline.parse_docx import parse_docx
 from pdf_pipeline.heading_detection import detect_headings
-from pdf_pipeline.mongo_utils import insert_spans, insert_outline
+from pdf_pipeline.mongo_utils import insert_spans, insert_outline, insert_sections
 from app.db import get_db
 from dotenv import load_dotenv
 from app.headings_api import router as headings_router
+from pdf_pipeline.ingest import extract_sections
 
 load_dotenv()
 
@@ -91,6 +92,11 @@ async def ingest_pdf(file: UploadFile = File(...)):
             await get_db().spans.insert_one(span)
         outline = detect_headings(spans, pdf_name)
         await get_db().outlines.insert_one({"pdf_name": pdf_name, **outline})
+        # --- New: Extract and insert sections automatically ---
+        sections = extract_sections(spans, outline)
+        for section in sections:
+            section['pdf_name'] = pdf_name
+            await get_db().sections.insert_one(section)
         return {"outline_id": str(pdf_name)}
 
 @app.get("/outline/{pdf_name}", response_model=OutlineResponse)

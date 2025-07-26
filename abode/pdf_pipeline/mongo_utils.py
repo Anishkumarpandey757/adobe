@@ -23,4 +23,11 @@ def get_outline(pdf_name, mongo_uri, db_name):
     client.close()
     if doc:
         return doc['outline']
-    return [] 
+    return []
+
+def insert_sections(sections, pdf_name, mongo_uri, db_name):
+    db, client = get_db(mongo_uri, db_name)
+    for section in sections:
+        section['pdf_name'] = pdf_name
+        db.sections.insert_one(section)
+    client.close() 
